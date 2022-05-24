@@ -1,6 +1,6 @@
 # Unit Conversion
 Simple Unit Converter made with JavaScript, HTML<br/>
-This was created for my Web Programming class and fun!
+This was created for my Web Programming class and fun!<br/>
 Maybe one day it could be an iOS or Android application...
 <br/>
 <br/>
