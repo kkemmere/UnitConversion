@@ -1,10 +1,11 @@
 # Unit Conversion
-Simple Unit Converter made with JavaScript, HTML
+Simple Unit Converter made with JavaScript, HTML<br/>
+This was created for my Web Programming class and fun!
+Maybe one day it could be an iOS or Android application...
 <br/>
 <br/>
 Very small and simple project that can be brought to much more interesting heights.<br/>
-Code is unprotected and application can be run by downloading 
-This was created for Web Programming and fun!
+Code is unprotected and application can be run simply by downloading "calcforms.html" + "calcfunctions.js"<br/>
 <br/>
 
 Created by Kevin Kemmerer
