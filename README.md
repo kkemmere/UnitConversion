@@ -12,7 +12,7 @@ Application continuously calculates each time an input is seen, no submit button
 Created by Kevin Kemmerer
 <br/>
 
-# Application can be seen here: Updated (11/5/22)
-https://kkemmere.github.io/UnitConversion
+# Application can be seen here: 
+https://kkemmere.github.io/UnitConversion Updated (11/5/22)
 
 <br/>
