@@ -16,6 +16,7 @@
                 background-color: #15181d;
                 margin: 30px auto;
                 font-family: 'Courier New', Courier, monospace;
+                font-size: large;
 
             }
 
@@ -24,9 +25,31 @@
                 background-color: cyan;
                 text-align: center;
                 font-weight: bold;
+                font-size: medium;
                 font-family: sans-serif;
                 width: 150px;
                 display: flex;
+                box-sizing: border-box;
+                transition: width 0.4s ease-in-out;
+                border-width: calc(var(--border-width) * 1px);
+                border-style: solid;
+                border-color: var(--accent);
+                outline: transparent;
+                padding: 2px;
+                border-radius: 7px;
+                
+            }
+
+            :placeholder-shown {
+             --accent: #ccc;
+            }
+
+            :not(:placeholder-shown) {
+              --accent: hsl(248, 53%, 58%);
+            }
+            
+            input[type="number"]:focus {
+                width: 200px;
             }
 
             .link {
@@ -48,6 +71,7 @@
                 display: inline-block;
                 width: 46%;
                 height: 50%;
+                padding: 6px;
             }
 
             /* Needs to be specified via escaped unicode to add empty string*/
@@ -71,7 +95,7 @@
         <h1>Kevin's Unit Converter</h1>
         <br>
         <label class="req">Decimal places</label>
-        <input id="decPlaces" type="number" name="inputDecPlacesfield" placeholder="" oninput="setDecimal(this.value)" onchange="setDecimal(this.value)"><br>
+        <input id="decPlaces" type="number" name="inputDecPlacesfield" placeholder="Whole #" oninput="setDecimal(this.value)" onchange="setDecimal(this.value)"><br>
         <hr>
 
         <!-- Length Conversions  -->
