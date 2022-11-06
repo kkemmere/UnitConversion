@@ -9,48 +9,103 @@
 
         <!-- linking js file to html file  -->
         <title>Unit Converter</title>
+        <a href="https://kkemmere.github.io/" class="link">Return</a>
         <script src="calcfunctions.js"></script>
+        <style>
+            body {
+                background-color: #15181d;
+                margin: 30px auto;
+                font-family: 'Courier New', Courier, monospace;
+
+            }
+
+            input[type="number"], textarea {
+                float: none;
+                background-color: cyan;
+                text-align: center;
+                font-weight: bold;
+                font-family: sans-serif;
+                width: 150px;
+                display: flex;
+            }
+
+            .link {
+                font-weight: bold;
+                color: #ccc;
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: bold;
+                color: #ccc;
+            }
+
+            label {
+                float: left;
+                font-weight: bold;
+                color: #ccc;
+                text-align: right;
+                display: inline-block;
+                width: 46%;
+                height: 50%;
+            }
+
+            /* Needs to be specified via escaped unicode to add empty string*/
+            /* Writing something as simple as content: " "; will add a space but be immediately removed*/
+            label.req::after {
+                content: " \00a0 ";
+            }
+
+            h3 {
+                font-weight: bold;
+                color: #ccc;
+                text-align: center;
+            }
+
+        </style>
 
     </head>
 
     <body>
 
-        <h1 style="text-align: center">Kevin's Unit Converter</h1>
+        <h1>Kevin's Unit Converter</h1>
         <br>
+        <label class="req">Decimal places</label>
+        <input id="decPlaces" type="number" name="inputDecPlacesfield" placeholder="" oninput="setDecimal(this.value)" onchange="setDecimal(this.value)"><br>
         <hr>
 
         <!-- Length Conversions  -->
         <h3>Length</h3>
         <form id="form_1">
             <!-- Conversion input boxes and buttons -->
-            <label>Feet</label>
+            <label class="req">Feet</label>
             <input id="inputFeet" type="number" name="inputFeetfield" placeholder="Feet" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
         
             <!-- can use button to calculate as well if needed  -->
             <!-- <input type="button" name="FeetButton" value="Calculate" onclick="FeetConverter(inputFeet.value)"> -->
             <br>
 
-            <label>Meters</label>
+            <label class="req">Meters</label>
             <input id="inputMeters" type="number" name="inputMetersfield" placeholder="Meters" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Inches</label>
+            <label class="req">Inches</label>
             <input id="inputInches" type="number" name="inputInchesfield" placeholder="Inches" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Centimeters</label>
+            <label class="req">Centimeters</label>
             <input id="inputcm" type="number" name="inputcmfield" placeholder="Centimeters" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Yards</label>
+            <label class="req">Yards</label>
             <input id="inputYards" type="number" name="inputYardsfield" placeholder="Yards" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Kilometers</label>
+            <label class="req">Kilometers</label>
             <input id="inputKilometers" type="number" name="inputKilometersfield" placeholder="Kilometers" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Miles</label>
+            <label class="req">Miles</label>
             <input id="inputMiles" type="number" name="inputMilesfield" placeholder="Miles" oninput="LengthConverter(this.id, this.value)" onchange="LengthConverter(this.id, this.value)"><br>
             <br>
             <hr>
@@ -60,26 +115,26 @@
         <h3>Weight</h3>
         <form id="form_2">
             <!-- Conversion input boxes and buttons -->
-            <label>Pounds</label>
+            <label class="req">Pounds</label>
             <input id="inputPounds" type="number" name="inputPoundsfield" placeholder="Pounds" oninput="WeightConverter(this.id, this.value)" onchange="WeightConverter(this.id, this.value)"><br>
         
             <!-- can use button to calculate as well if needed  -->
             <!-- <input type="button" name="FeetButton" value="Calculate" onclick="FeetConverter(inputFeet.value)"> -->
             <br>
 
-            <label>Ounces</label>
+            <label class="req">Ounces</label>
             <input id="inputOunces" type="number" name="inputOuncesfield" placeholder="Ounces" oninput="WeightConverter(this.id, this.value)" onchange="WeightConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Grams</label>
+            <label class="req">Grams</label>
             <input id="inputGrams" type="number" name="inputGramsfield" placeholder="Grams" oninput="WeightConverter(this.id, this.value)" onchange="WeightConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Kilograms</label>
+            <label class="req">Kilograms</label>
             <input id="inputKilograms" type="number" name="inputKilogramsfield" placeholder="Kilograms" oninput="WeightConverter(this.id, this.value)" onchange="WeightConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Stones</label>
+            <label class="req">Stones</label>
             <input id="inputStones" type="number" name="inputStonesfield" placeholder="Stones" oninput="WeightConverter(this.id, this.value)" onchange="WeightConverter(this.id, this.value)"><br>
             <br>
             <hr>
@@ -89,21 +144,20 @@
         <h3>Temperature</h3>
         <form id="form_3">
             <!-- Conversion input boxes and buttons -->
-            <label>Fahrenheit</label>
+            <label class="req">Fahrenheit</label>
             <input id="inputFahrenheit" type="number" name="inputFahrenheitfield" placeholder="Fahrenheit" oninput="TempConverter(this.id, this.value)" onchange="TempConverter(this.id, this.value)"><br>
         
             <!-- can use button to calculate as well if needed  -->
             <!-- <input type="button" name="FeetButton" value="Calculate" onclick="FeetConverter(inputFeet.value)"> -->
             <br>
 
-            <label>Celsius</label>
+            <label class="req">Celsius</label>
             <input id="inputCelsius" type="number" name="inputCelsiusfield" placeholder="Celsius" oninput="TempConverter(this.id, this.value)" onchange="TempConverter(this.id, this.value)"><br>
             <br>
 
-            <label>Kelvin</label>
+            <label class="req">Kelvin</label>
             <input id="inputKelvin" type="number" name="inputKelvinfield" placeholder="Kelvin" oninput="TempConverter(this.id, this.value)" onchange="TempConverter(this.id, this.value)"><br>
             <br>
-            <hr>
         </form>
 
     </body>
